@@ -1,0 +1,10 @@
+# use glob syntax.
+syntax: glob
+
+*.class
+bin
+lib
+.settings
+
+# switch to regexp syntax.
+syntax: regexp
