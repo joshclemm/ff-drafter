@@ -339,6 +339,17 @@ public class RankingsTable extends JXTable {
 		}
 	}
 
+	/**
+	 * This class provides the action when a user wants to view
+	 * more information about a player in their internet browser.
+	 * 
+	 * It creates a search query using the player's name and uses
+	 * Google's Feeling lucky option to go directly to the desired
+	 * page.
+	 * 
+	 * @author Josh Clemm
+	 *
+	 */
 	private class ViewPlayerInBrowserAction extends AbstractAction {
 
 		private static final long serialVersionUID = 1L;
@@ -350,9 +361,6 @@ public class RankingsTable extends JXTable {
 			this.source = source;
 		}
 
-		//		public ViewPlayerInBrowserAction() {
-		//			super("View Details");
-		//		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			String name = getName(selectedRow);
@@ -364,7 +372,6 @@ public class RankingsTable extends JXTable {
 			String searchQuery = "http://www.google.com/search?client=firefox-a&rls=org.mozilla%3Aen-US%3Aofficial&hs=chK&hl=en&q="+ searchTerm  +"&btnI=I%27m+Feeling+Lucky&aq=f&oq=&aqi=g10";
 
 			BrowserUtil.displayURL(searchQuery);
-
 		}
 	}
 
